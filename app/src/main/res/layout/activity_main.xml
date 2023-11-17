@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/brokerAddressEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Broker Address"
+        android:text="broker.hivemq.com"
+        android:inputType="text"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:text="1883"
+
+        android:id="@+id/brokerPortEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/brokerAddressEditText"
+        android:layout_marginTop="8dp"
+        android:hint="Broker Port"
+        android:inputType="number"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/gasTopicEditText"
+        android:text="security/gaz"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/brokerPortEditText"
+        android:layout_marginTop="8dp"
+        android:hint="Gas Topic"
+        android:inputType="text"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/thresholdEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gasTopicEditText"
+        android:layout_marginTop="8dp"
+        android:hint="Threshold"
+        android:text="1000"
+
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/thresholdEditText"
+        android:layout_marginTop="16dp"
+        android:text="Connect"
+        android:background="#E1AD01"
+        android:onClick="startButtonClick" />
+
+    <TextView
+        android:id="@+id/gasValueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/startButton"
+        android:layout_marginTop="16dp"
+        android:text="Gaze Value: "
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
